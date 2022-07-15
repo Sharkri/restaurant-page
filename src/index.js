@@ -9,10 +9,14 @@ const contactBtn = document.createElement("button");
 homepageBtn.textContent = "Home";
 menuBtn.textContent = "Menu";
 contactBtn.textContent = "Contact";
-content.appendChild(homepageBtn);
-content.appendChild(menuBtn);
-content.appendChild(contactBtn);
+const buttons = document.createElement("div");
+buttons.appendChild(homepageBtn);
+buttons.appendChild(menuBtn);
+buttons.appendChild(contactBtn);
+buttons.classList.add("buttons");
+content.appendChild(buttons);
 const main = document.createElement("div");
+main.classList.add("main");
 content.appendChild(main);
 
 // Default Page
@@ -23,8 +27,7 @@ function switchTab(tab) {
 
   main.appendChild(tab);
 }
-const buttonTabs = document.querySelectorAll("button");
-buttonTabs.forEach((tab) => {
+buttons.childNodes.forEach((tab) => {
   tab.addEventListener("click", () => {
     console.log(tab.textContent);
     if (tab.textContent == "Home") switchTab(home());
