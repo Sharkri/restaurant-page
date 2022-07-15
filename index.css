@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#content {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+button {
+  font-size: 18px;
+  width: 100px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e5e7eb;
+}
+button:hover {
+  transition: 0.5s;
+  background-color: #f0eaea;
+}
+.main {
+  background-color: beige;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 10px;
+}
