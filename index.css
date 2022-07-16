@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  --main-color: #ef4444;
+  font-family: "Montserrat", sans-serif;
+}
 #content {
   width: 100vw;
   height: 100vh;
@@ -15,18 +19,34 @@
   display: flex;
   padding: 14px;
 }
-button {
+.header button {
   font-size: 20px;
   width: 100px;
   height: 36px;
   border: none;
   cursor: pointer;
   background-color: transparent;
+  font-weight: bold;
+
   color: beige;
 }
-button:hover {
+.header button:hover {
   transition: 0.5s;
   font-size: 20.5px;
+  color: var(--main-color);
+}
+
+.header .active {
+  color: var(--main-color);
+}
+.menuButton {
+  border-radius: 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  font-size: 22px;
+  width: 150px;
+  padding: 8px;
 }
 .main {
   padding: 24px 40px 24px 40px;
@@ -34,9 +54,12 @@ button:hover {
   max-width: 800px;
   position: absolute;
   color: white;
-  top: 120px;
-  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  height: 475px;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header {
   display: flex;
@@ -44,13 +67,48 @@ button:hover {
   align-items: center;
   background-color: #0369a1;
   width: 100vw;
-  color: #ef4444;
+  color: var(--main-color);
   padding: 10px;
-  font-family: "Montserrat", sans-serif;
+}
+.main h1 {
+  margin-bottom: 10px;
+  color: var(--main-color);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--main-color);
 }
 img {
   object-fit: cover;
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+.main > div {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 2vh;
+
+  height: calc(475px - 24px);
+}
+
+.mainPara {
+  font-size: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.location,
+.clock {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+svg {
+  width: 32px;
 }
