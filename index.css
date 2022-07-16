@@ -51,15 +51,15 @@ body {
 .main {
   padding: 24px 40px 24px 40px;
   margin-top: 10px;
-  max-width: 800px;
+  max-width: 770px;
   position: absolute;
   color: white;
   text-align: center;
-  height: 475px;
   background-color: rgba(0, 0, 0, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 10px;
 }
 .header {
   display: flex;
@@ -71,7 +71,6 @@ body {
   padding: 10px;
 }
 .main h1 {
-  margin-bottom: 10px;
   color: var(--main-color);
   padding-bottom: 12px;
   border-bottom: 2px solid var(--main-color);
@@ -82,23 +81,44 @@ img {
   width: 100%;
   overflow: hidden;
 }
-.main > div {
+.main .home {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 2vh;
-
-  height: calc(475px - 24px);
+  gap: 100px;
 }
-
+.main .menu {
+  height: 65vh;
+  gap: 2vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.foods {
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.foods div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.menu .foods {
+  display: grid;
+  gap: 36px;
+}
+.foods img {
+  height: 250px;
+  width: 250px;
+  border-radius: 8px;
+}
 .mainPara {
+  margin-top: 10px;
   font-size: 20px;
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-  justify-content: center;
+  display: grid;
   font-weight: bold;
 }
 
@@ -110,5 +130,6 @@ img {
 }
 
 svg {
-  width: 32px;
+  min-width: 32px;
+  height: 32px;
 }
