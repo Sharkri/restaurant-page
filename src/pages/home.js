@@ -64,11 +64,11 @@ export default function home() {
   info.appendChild(clock);
 
   const header = document.createElement("h1");
-  header.textContent = "Generic Restaurant";
+  header.textContent = "Bonjour Appetite";
 
   const para = document.createElement("p");
   para.classList.add("mainPara");
-  para.textContent = `At Generic Restaurant we strive to bring people
+  para.textContent = `At Bonjour Appetite we strive to bring people
   the best food prepared using the freshest
   and best ingredients.`;
 
@@ -77,5 +77,6 @@ export default function home() {
   text.appendChild(para);
   container.appendChild(text);
   container.appendChild(info);
+  container.classList.add("home");
   return container;
 }

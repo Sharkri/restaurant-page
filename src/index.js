@@ -21,7 +21,7 @@ buttons.appendChild(contactBtn);
 const header = document.createElement("div");
 header.classList.add("header");
 const headerText = document.createElement("h1");
-headerText.textContent = "generic restaurant";
+headerText.textContent = "Bonjour Appetite";
 
 header.appendChild(headerText);
 header.appendChild(buttons);
@@ -47,6 +47,7 @@ function turnOffActive() {
     if (a.classList.length) a.classList.toggle("active");
   });
 }
+
 buttons.childNodes.forEach((tab) => {
   tab.addEventListener("click", () => {
     turnOffActive();
