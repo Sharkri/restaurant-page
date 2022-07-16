@@ -13,7 +13,7 @@ contactBtn.textContent = "Contact";
 const buttons = document.createElement("div");
 buttons.classList.add("buttons");
 const img = new Image();
-img.src = `https://images.unsplash.com/photo-1541709521-b9bae54e4aae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80`;
+img.src = "../images/food.png";
 buttons.appendChild(homepageBtn);
 buttons.appendChild(menuBtn);
 buttons.appendChild(contactBtn);
@@ -32,17 +32,26 @@ main.classList.add("main");
 content.appendChild(header);
 content.appendChild(main);
 content.appendChild(img);
-// Default Page
+// Default
+homepageBtn.classList.toggle("active");
+console.log(homepageBtn);
 switchTab(home());
 
 function switchTab(tab) {
   main.innerHTML = "";
-
   main.appendChild(tab);
+}
+
+function turnOffActive() {
+  buttons.childNodes.forEach((a) => {
+    if (a.classList.length) a.classList.toggle("active");
+  });
 }
 buttons.childNodes.forEach((tab) => {
   tab.addEventListener("click", () => {
-    console.log(tab.textContent);
+    turnOffActive();
+    if (tab.classList.length == 0) tab.classList.toggle("active");
+
     if (tab.textContent == "Home") switchTab(home());
     if (tab.textContent == "Menu") switchTab(menu());
     if (tab.textContent == "Contact") switchTab(contact());
