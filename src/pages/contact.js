@@ -41,7 +41,7 @@ export default function contact() {
   contactInfo.appendChild(clockContainer);
 
   const map = new Image();
-  map.src = "../images/location.png";
+  map.src = "/images/location.png";
 
   const container = document.createElement("div");
   container.classList.add("contact");

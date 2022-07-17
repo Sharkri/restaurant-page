@@ -13,7 +13,7 @@ contactBtn.textContent = "Contact";
 const buttons = document.createElement("div");
 buttons.classList.add("buttons");
 const img = new Image();
-img.src = "../images/food.png";
+img.src = "/images/food.png";
 buttons.appendChild(homepageBtn);
 buttons.appendChild(menuBtn);
 buttons.appendChild(contactBtn);
