@@ -41,6 +41,7 @@ export default function menu() {
   menu.appendChild(food4);
   menu.appendChild(food5);
   menu.appendChild(food6);
+
   container.appendChild(header);
   container.appendChild(menu);
   container.classList.add("menu");
