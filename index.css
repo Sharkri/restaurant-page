@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
 }
 .buttons {
   display: flex;
@@ -27,7 +28,6 @@ body {
   cursor: pointer;
   background-color: transparent;
   font-weight: bold;
-
   color: beige;
 }
 .header button:hover {
@@ -51,7 +51,7 @@ body {
 .main {
   padding: 24px 40px 24px 40px;
   margin-top: 10px;
-  max-width: 770px;
+  max-width: 780px;
   position: absolute;
   color: white;
   text-align: center;
@@ -60,6 +60,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
+  max-height: calc(100% - 7.5vh - 40px);
 }
 .header {
   display: flex;
@@ -69,6 +70,7 @@ body {
   width: 100vw;
   color: var(--main-color);
   padding: 10px;
+  height: 7.5vh;
 }
 .main h1 {
   color: var(--main-color);
@@ -84,10 +86,9 @@ img {
 .main .home {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 100px;
+  gap: 6vh;
 }
 .main .menu {
-  height: 65vh;
   gap: 2vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -95,17 +96,15 @@ img {
 .foods {
   padding-top: 16px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 36px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  max-height: 70vh;
 }
 .foods div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-}
-.menu .foods {
-  display: grid;
-  gap: 36px;
 }
 .foods img {
   height: 250px;
@@ -132,4 +131,20 @@ img {
 svg {
   min-width: 32px;
   height: 32px;
+}
+
+.contactInfo {
+  display: grid;
+  gap: 12px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contactInfo p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
 }
