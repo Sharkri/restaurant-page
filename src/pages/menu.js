@@ -8,32 +8,32 @@ export default function menu() {
   const food1 = createMenuItem(
     "Waffle - €6.50",
     "Waffles sprinkled with powdered sugar and topped with fresh raspberries",
-    "/images/waffle.png"
+    "images/waffle.png"
   );
   const food2 = createMenuItem(
     "Buttered croissant - €4",
     "Authentic French croissants",
-    "/images/croissant.png"
+    "images/croissant.png"
   );
   const food3 = createMenuItem(
     "French Toast - €4",
     `Three slices of the best french toast you will ever eat, served with locally sourced maple syrup.`,
-    "/images/toast.png"
+    "images/toast.png"
   );
   const food4 = createMenuItem(
     "French Fries - €2.50",
     "Delicious french fries seasoned with garlic and herbs.",
-    "/images/fries.png"
+    "images/fries.png"
   );
   const food5 = createMenuItem(
     "Coffee - €2.75",
     "Coffee made with vanilla extract topped with a pinch of sugar.",
-    "/images/coffee.png"
+    "images/coffee.png"
   );
   const food6 = createMenuItem(
     "Chocolate Macaroons - €7.50",
     `Deliciously tasty chocolate macaroons.`,
-    "/images/macaroon.png"
+    "images/macaroon.png"
   );
   menu.appendChild(food1);
   menu.appendChild(food2);
